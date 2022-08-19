@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1400">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+	$('.tab .tabs a').on('click',function(){ // 탭메뉴에 있는 링크를 클릭했을때
+		var idx = $(this).parent().index(); // 현재 클릭한 링크의 부모가 몇번째 인지 idx 변수에 넣는다.
+
+		$(this).parent().siblings().removeClass('on'); // 현재 클릭한 링크의 부모를 제외 한 나머지 li에 on클래스를 제거하고
+		$(this).parent().addClass('on'); // 현재 클릭한 링크의 부모 li에 on클래스 넣는다.
+
+		$(this).parent().parent().siblings('.tab_con').removeClass('on');
+		// 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con에 클래스 on을 지워준다.
+
+		$(this).parent().parent().siblings('.tab_con').eq(idx).addClass('on');
+		// 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con을 선택하고 그중 eq번째에 클래스 on을 넣는다.
+
+	});
+});
+</script>
+    <title>Menu</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--파비콘-->
+    <link href="images/sub_logo.png" rel="icon" type="image/png" sizes="32x32">
+</head>
+
+
+<body>
+    <!--header s-->
+    <div id="header">
+    <div class="header_inner">
+        <div class="nav">
+            <a href="https://yunjung76.github.io/pururum/" class="logo"><img src="images/logo.png" alt="로고이미지"></a>
+            <ul id="gnb">
+                <li><a href="https://yunjung76.github.io/sub01/" class="link">푸르름<div class="solid"></div></a></li>
+                <li><a href="https://yunjung76.github.io/sub02/
+                    " class="link">Menu<div class="solid"></div></a></li>
+                <li><a href="https://yunjung76.github.io/sub03/" class="link">Shop<div class="solid"></div></a></li>
+                <li><a href="https://yunjung76.github.io/sub04/" >Event<div class="solid"></div></a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!--header f-->
+
+    <!--banner s-->
+    <div id="banner">
+        <img src="images/banner.jpg" alt="배너이미지" class="banner_img">
+    </div>
+    <!--banner f-->
+
+    <!--tab menu s-->
+
+    <!--tap list s-->
+    <div class="tab">
+        <ul class="tabs type1">
+        <li class="on line"><a href="#none">Coffee</a></li>
+        <li class="line"><a href="#none">Non-Coffee</a></li>
+        <li class="line"><a href="#none">Ade/Tea</a></li>
+        <li><a href="#none">Dessert</a></li>
+        </ul>	
+        
+        <!--coffee tab s-->
+        <div class="tab_con on">
+            <div id="coffee">
+                <h1>Coffee</h1>
+                <img src="images/line.png" alt="underline" class="underline">
+                <p>식물원의 입장비가 포함된 금액입니다.</p>
+        
+                <img src="images/coffee_icon.png" alt="커피잔 아이콘" class="coffee_cup">
+            </div>
+
+            <div id="content">
+                <div class="menu_box bestmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text long">
+                                푸르름만의 특별한 원두로<br>
+                                추출하였으며, <br>
+                                적당한 산미와 고소함, <br>
+                                향의 여운이 특징
+                            </div>
+                        </div>
+
+                        <img src="images/coffee01.png" alt="아메리카노" class="d01">
+                    </div>
+                    <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                    <h3>아메리카노</h3>
+                    <h4>Americano</h4>
+                    <h5>Hot / ICE　<span class="cost">5.0</span></h5>
+                </div>
+
+
+                <div class="menu_box bestmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                고소한 우유와<br>
+                                에소프레소의<br>
+                                조화롭고 깔끔한 맛
+                            </div>
+                        </div>
+
+                        <img src="images/coffee02.png" alt="카페라떼" class="d02">
+                    </div>
+                    <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                    <h3>카페라떼</h3>
+                    <h4>Cafe Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">5.5</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                커피의 향, 우유의 맛,<br>
+                                거품의 촉감을 <br>
+                                한번에 즐길 수 있는 음료
+                            </div>
+                        </div>
+
+                        <img src="images/coffee03.png" alt="카푸치노" class="d03">
+                    </div>
+                    <h3>카푸치노</h3>
+                    <h4>Cappuccino</h4>
+                    <h5>Hot / ICE　<span class="cost">5.8</span></h5>
+                </div>
+
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                카라멜과 우유거품으로<br>
+                                더욱 부드럽고 달콤하게<br>
+                                즐길 수 있는 음료
+                            </div>
+                        </div>
+
+                        <img src="images/coffee04.png" alt="카라멜 마끼아또" class="d04">
+                    </div>
+                    <h3>카라멜 마끼아또</h3>
+                    <h4>Caramel Macchiato</h4>
+                    <h5>Hot / ICE　<span class="cost">6.0</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                헤이즐넛 시럽과 우유가 만나<br>
+                                고소함이 더욱 극대화된<br>
+                                부드러운 라떼
+                            </div>
+                        </div>
+
+                        <img src="images/coffee05.png" alt="헤이즐넛 라떼" class="d05">
+                    </div>
+                    <h3>헤이즐넛 라떼</h3>
+                    <h4>Hazelnut Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">5.8</span></h5>
+                </div>
+
+
+                <div class="menu_box bestmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                푸르름 수제<br>
+                                바닐라 빈 시럽으로<br>
+                                더욱 특별한 바닐라라떼
+                            </div>
+                        </div>
+
+                        <img src="images/coffee0607.png" alt="바닐라 빈 라떼" class="d06">
+                    </div>
+                    <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                    <h3>바닐라 빈 라떼</h3>
+                    <h4>Vanilla Bean Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">5.8</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                향긋한 에스프레소와<br>
+                                부드러운 연유의<br>
+                                달콤한 조합
+                            </div>
+                        </div>
+
+                        <img src="images/coffee0607.png" alt="연유라떼" class="d07">
+                    </div>
+                    <h3>연유라떼</h3>
+                    <h4>Condensed Milk Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">6.0</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                초코를 만나 풍부해진 에스프레소와<br>
+                                부드러운 휘핑크림까지 더해<br>
+                                달콤하게 즐길 수 있는 음료<br>
+                            </div>
+                        </div>
+
+                        <img src="images/coffee08.png" alt="카페모카" class="d08">
+                    </div>
+                    <h3>카페모카</h3>
+                    <h4>Cafe Mocha</h4>
+                    <h5>Hot / ICE　<span class="cost">6.0</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                저온 고농도 추출 방식으로<br>
+                                아메리카노보다 깔끔한 맛을<br>
+                                느낄수 있는 음료
+                            </div>
+                        </div>
+
+                        <img src="images/coffee09.png" alt="콜드브루/디카페인" class="d09">
+                    </div>
+                    <h3>콜드브루 / 디카페인</h3>
+                    <h4>Cold Brew / Decaffein</h4>
+                    <h5>Only Ice　<span class="cost">6.0</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text long">
+                                푸르름 특제 콜드브루/디카페인을<br>
+                                라떼로 만들어<br>
+                                깔끔함과 부드러움을<br>
+                                극대화 시킨 음료
+                            </div>
+                        </div>
+
+                        <img src="images/coffee10.png" alt="콜드브루 / 디카페인 라떼" class="d10">
+                    </div>
+                    <h3>콜드브루 / 디카페인 라떼</h3>
+                    <h4>Cold Brew / Decaffein Latte</h4>
+                    <h5>Only Ice　<span class="cost">6.3</span></h5>
+                </div>
+            </div>
+
+            <!--coffee tab footer s-->
+            <div id="footer">
+                <div class="footer_inner">
+                    <a href="#" class="footer_logo"><img src="images/logo.png" alt="푸터로고"></a>
+                    <p class="footer_text">
+                        부산광역시 기장군 정관읍 병산리 205 푸르름 ｜ Tel : 051-123-4567 <br>
+                        Copy Right ⓒ Cafe 푸르름 All right reserved.
+                    </p>
+        
+                    <a href="#" class="insta"><img src="images/button01.png" alt="인스타그램"></a>
+                    <a href="#" class="youtube"><img src="images/button02.png" alt="유튜브"></a>
+                    <a href="#" class="facebook"><img src="images/button03.png" alt="페이스북"></a>
+                </div>
+            </div>
+            <!--coffee tab footer f-->
+
+            
+        </div><!--tab_con on-->
+        <!--coffee tab f-->
+
+<!-------------------------------------------non-coffee----------------------------------------->
+        <div class="tab_con">
+            <div id="non">
+                <h1>Non-Coffee</h1>
+                <img src="images/line.png" alt="underline" class="underline">
+                <p>식물원의 입장비가 포함된 금액입니다.</p>
+
+                <img src="images/coffee_icon.png" alt="커피잔 아이콘" class="coffee_cup">
+
+                <h2>BEVERAGE</h2>
+            </div>
+
+        <!-------------------------------------beverage----------------------------------------->
+            <div id="content_non">
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text short">
+                                진하고 풍부한 맛의 초코와<br>
+                                우유가 만난 음료
+                            </div>
+                        </div>
+
+                        <img src="images/non-coffee/non01.png" alt="초코라떼" class="n01">
+                    </div>
+                    <h3>초코라떼</h3>
+                    <h4>Chocolate Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">5.5</span></h5>
+                </div>
+
+
+                <div class="menu_box bestmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                말차 특유의 쌉싸름한 맛에<br>
+                                우유를 더해<br>
+                                부드러운 맛이 어우러진 음료
+                            </div>
+                        </div>
+
+                        <img src="images/non-coffee/non02.png" alt="말차라떼" class="n02">
+                    </div>
+                    <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                    <h3>말차라떼</h3>
+                    <h4>Malcha Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">6.0</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                쌉싸름한 말차 베이스와<br>
+                                초코 시럽이 만나 <br>
+                                달콤 쌉싸름한 음료
+                            </div>
+                        </div>
+
+                        <img src="images/non-coffee/non03.png" alt="초코나무 라떼" class="n03">
+                    </div>
+                    <h3>초코나무 라떼</h3>
+                    <h4>Malcha Chocolate Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">6.5</span></h5>
+                </div>
+
+
+
+                <div class="menu_box newmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text short">
+                                고소한 밤 라떼와<br>
+                                부드러운 크림의 만남
+                            </div>
+                        </div>
+
+                        <img src="images/non-coffee/non04.png" alt="크림 밤 라떼" class="n04">
+                    </div>
+                    <img src="images/new.png" alt="신메뉴 아이콘" class="new">
+                    <h3>크림 밤 라떼</h3>
+                    <h4>Cream Chestnut Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">6.3</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                은은하게 퍼지는 카라멜 향기와<br>
+                                견과의 고소함을<br>
+                                한입에 즐길 수 있는 라떼
+                            </div>
+                        </div>
+
+                        <img src="images/non-coffee/non05.png" alt="토피넛 라떼" class="n05">
+                    </div>
+                    <h3>토피넛 라떼</h3>
+                    <h4>Toffee Nut Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">5.8</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                홍차의 향긋함과<br>
+                                우유의 고소함이 더해져<br>
+                                부드럽고 진한 풍미의 음료
+                            </div>
+                        </div>
+
+                        <img src="images/non-coffee/non06.png" alt="바닐라 빈 라떼" class="n06">
+                    </div>
+                    <h3>얼그레이 밀크티</h3>
+                    <h4>Earl Grey Milk Tea</h4>
+                    <h5>Hot / ICE　<span class="cost">5.8</span></h5>
+                </div>
+
+
+                <div class="menu_box bestmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                직접 만든 달고나 크림과<br>
+                                우유를 함께 즐기는<br>
+                                부드럽고 달콤한 음료
+                            </div>
+                        </div>
+                        
+                        <img src="images/non-coffee/non07.png" alt="달고나 라떼" class="n07">
+                    </div>
+                    <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                    <h3>달고나 라떼</h3>
+                    <h4>Dalgona Latte</h4>
+                    <h5>Only Ice　<span class="cost">6.0</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text short">
+                                우유에 곡물을 더해<br>
+                                고소하고 든든하게 즐기는 음료
+                            </div>
+                        </div>
+
+                        <img src="images/non-coffee/non08.png" alt="곡물라떼" class="n08">
+                    </div>
+                    <h3>곡물라떼</h3>
+                    <h4>Grain Latte</h4>
+                    <h5>Hot / ICE　<span class="cost">5.6</span></h5>
+                </div>
+            </div>
+
+
+        <!----------------------------------------juice----------------------------------------->
+        <div id="content2_non"> <!--content2 s-->
+            <h2>JUICE</h2>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            탱글하게 살아 있는 딸기 과육의<br>
+                            상큼함을 만끽할 수 있는<br>
+                            생과일 음료
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/juice01.png" alt="딸기주스" class="j01">
+                </div>
+                <h3>딸기주스</h3>
+                <h4>Strawberry Juice</h4>
+                <h5>Only Ice　<span class="cost">6.0</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            푸르름에서 직접 착즙한<br>
+                            오렌지 즙으로<br>
+                            달콤하게 즐길 수 있는 음료
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/juice02.png" alt="오렌지주스" class="j02">
+                </div>
+                <h3>오렌지주스</h3>
+                <h4>Orange Juice</h4>
+                <h5>Only Ice　<span class="cost">6.0</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            깊은 망고의 풍미와<br>
+                            싱싱한 과육으로<br>
+                            달콤 시원하게 즐기는 음료
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/juice03.png" alt="망고주스" class="j03">
+                </div>
+                <h3>망고주스</h3>
+                <h4>Mango Juice</h4>
+                <h5>Only Ice　<span class="cost">6.0</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            바나나가 통째로 들어가<br>
+                            진짜 바나나의 풍미를 담은<br>
+                            부드러운 음료
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/juice04.png" alt="바나나주스" class="j04">
+                </div>
+                <h3>바나나주스</h3>
+                <h4>Banana Juice</h4>
+                <h5>Only Ice　<span class="cost">5.8</span></h5>
+            </div>
+        </div> <!--content2 f-->
+
+        <!-------------------------------------smoothie----------------------------------------->
+
+        <div id="content3_non"><!--content3 s-->
+            <h2>SMOOTHIE</h2>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            푸르름의 수제 바닐라 빈 시럽과<br>
+                            우유의 부드러움을<br>
+                            한번에 맛볼 수 있는 음료
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/smoothie0102.png" alt="밀크쉐이크" class="s0102">
+                </div>
+                <h3>밀크쉐이크</h3>
+                <h4>Milk Shake</h4>
+                <h5>Only Ice　<span class="cost">6.3</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            상큼하고 달콤한 요거트를<br>
+                            스무디 제형으로<br>
+                            더욱 시원하게 즐길 수 있는 음료
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/smoothie0102.png" alt="플레인 요거트 스무디" class="s0102">
+                </div>
+                <h3>플레인 요거트 스무디</h3>
+                <h4>Plain Yogurt Smoothie</h4>
+                <h5>Only Ice　<span class="cost">6.3</span></h5>
+            </div>
+
+            <div class="menu_box bestmenu">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text short">
+                            블루베리 과육과<br>
+                            새콤한 요거트의 만남
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/smoothie03.png" alt="블루베리 요거트 스무디" class="s03">
+                </div>
+                <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                <h3>블루베리 요거트 스무디</h3>
+                <h4>Blueberry Yogurt Smoothie</h4>
+                <h5>Only Ice　<span class="cost">6.8</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            싱싱한 딸기 과육과<br>
+                            우유와 얼음, 휘핑크림이 만나<br>
+                            새콤달콤한 스무디
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/smoothie04.png" alt="딸기 스무디" class="s04">
+                </div>
+                <h3>딸기스무디</h3>
+                <h4>Strawberry Smoothie</h4>
+                <h5>Only Ice　<span class="cost">6.5</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            향긋한 녹차 위에<br>
+                            우유와 휘핑크림을 더해<br>
+                            더 부드럽게 즐길 수 있는 스무디
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/smoothie05.png" alt="그린티 스무디" class="s05">
+                </div>
+                <h3>그린티 스무디</h3>
+                <h4>Green Tea Smoothie</h4>
+                <h5>Only Ice　<span class="cost">6.3</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            진한 초코소스와<br>
+                            부드러운 바닐라향의 만남으로<br>
+                            질리지 않는 달콤함을 완성한 스무디
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/smoothie06.png" alt="초코스무디" class="s06">
+                </div>
+                <h3>초코 스무디</h3>
+                <h4>Chocolate Smoothie</h4>
+                <h5>Only Ice　<span class="cost">6.8</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            부드러운 바닐라에<br>
+                            향긋한 에스프레소를 섞어 만든<br>
+                            힐링 스무디
+                        </div>
+                    </div>
+
+                    <img src="images/non-coffee/smoothie07.png" alt="커피 스무디" class="s07">
+                </div>
+                <h3>커피 스무디</h3>
+                <h4>Coffee Smoothie</h4>
+                <h5>Only Ice　<span class="cost">6.8</span></h5>
+            </div>
+        </div><!--content3 f-->
+
+        <!--non-coffee tab footer s-->
+        <div id="footer">
+            <div class="footer_inner">
+                <a href="#" class="footer_logo"><img src="images/logo.png" alt="푸터로고"></a>
+                <p class="footer_text">
+                    부산광역시 기장군 정관읍 병산리 205 푸르름 ｜ Tel : 051-123-4567 <br>
+                    Copy Right ⓒ Cafe 푸르름 All right reserved.
+                </p>
+    
+                <a href="#" class="insta"><img src="images/button01.png" alt="인스타그램"></a>
+                <a href="#" class="youtube"><img src="images/button02.png" alt="유튜브"></a>
+                <a href="#" class="facebook"><img src="images/button03.png" alt="페이스북"></a>
+            </div>
+        </div>
+        <!--non-coffee tab footer f-->
+        </div><!--tap con-->
+
+        <!-------------------------------------ade/tea---------------------------------------->
+        <div class="tab_con"><!--ade/tea tap con s-->
+            <div id="adetea">
+                    <h1>Ade / Tea</h1>
+                    <img src="images/line.png" alt="underline" class="underline">
+                    <p>식물원의 입장비가 포함된 금액입니다.</p>
+    
+                    <img src="images/coffee_icon.png" alt="커피잔 아이콘" class="coffee_cup">
+    
+                    <h2>ADE</h2>
+            </div>
+
+                <div id="content_ade"><!--ade content box s-->
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    시트러스향 가득한 레몬의 상큼함과<br>
+                                    톡 쏘는 탄산의 상쾌함이 만난<br>
+                                    청량 에이드
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/ade01.png" alt="레몬에이드" class="a01">
+                        </div>
+                        <h3>레몬 에이드</h3>
+                        <h4>Lemon Ade</h4>
+                        <h5>Ice Only　<span class="cost">5.0</span></h5>
+                    </div>
+    
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    자몽의 달콤쌉싸름한 맛과<br>
+                                    탄산의 톡 쏘는 목넘김이 어우러진<br>
+                                    트로피컬 에이드
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/ade02.png" alt="자몽에이드" class="a02">
+                        </div>
+                        <h3>자몽 에이드</h3>
+                        <h4>Grapefruit Ade</h4>
+                        <h5>Ice Only　<span class="cost">5.3</span></h5>
+                    </div>
+    
+                    <div class="menu_box bestmenu">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    산뜻한 청포도와<br>
+                                    시원한 탄산의<br>
+                                    달달한 조화가 인상적인 에이드
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/ade03.png" alt="청포도에이드" class="a03">
+                        </div>
+
+                        <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                        <h3>청포도 에이드</h3>
+                        <h4>Green Grape Ade</h4>
+                        <h5>Ice Only　<span class="cost">5.3</span></h5>
+                    </div>
+    
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    상큼한 라임과<br>
+                                    달콤한 향기의 애플민트가 어우러져<br>
+                                    상쾌함을 가득 채운 음료
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/ade04.png" alt="모히또 에이드" class="a04">
+                        </div>
+                        <h3>모히또 에이드</h3>
+                        <h4>Mojito Ade</h4>
+                        <h5>Ice Only　<span class="cost">5.5</span></h5>
+                    </div>
+    
+                    <div class="menu_box bestmenu">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    푸르름에서 만든 수제청으로<br>
+                                    새콤달콤하게 맛볼 수 있는<br>
+                                    이국적인 에이드
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/ade05.png" alt="패션후르츠에이드" class="a05">
+                        </div>
+
+                        <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                        <h3>패션후르츠 에이드</h3>
+                        <h4>Passion Fruit Ade</h4>
+                        <h5>Ice Only　<span class="cost">6.0</span></h5>
+                    </div>
+
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    레몬 에이드의 상큼한 청량감에<br>
+                                    블루큐라소의 진한 향미를<br>
+                                    더한 에이드
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/ade06.png" alt="블루레몬에이드" class="a06">
+                        </div>
+                        <h3>블루 레몬 에이드</h3>
+                        <h4>Blue Lemon Ade</h4>
+                        <h5>Ice Only　<span class="cost">5.8</span></h5>
+                    </div>
+                </div> <!--ade content box s-->   
+
+                <!--content_tea s-->
+                <div id="content_tea">
+                    <h2>TEA</h2>
+
+                    <div class="menu_box bestmenu">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    깊은 맛의 홍차와<br>
+                                    달콤한 복숭아의<br>
+                                    은은한 향이 어우러진 음료
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea01.png" alt="복숭아 아이스티" class="t01">
+                        </div>
+
+                        <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                        <h3>복숭아 아이스티</h3>
+                        <h4>Peach Iced Tea</h4>
+                        <h5>Ice Only　<span class="cost">4.5</span></h5>
+                    </div>
+
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    고소한 감칠맛과<br>
+                                    부드러운 목넘김으로<br>
+                                    산뜻한 국내산 녹차
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea0205.png" alt="녹차" class="t0205">
+                        </div>
+                        <h3>녹차</h3>
+                        <h4>Green Tea</h4>
+                        <h5>Hot / Ice　<span class="cost">5.0</span></h5>
+                    </div>
+
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    새콤달콤한 서양자두와<br>
+                                    크림향을 블랜딩한<br>
+                                    허브티
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea03.png" alt="루이보스" class="t03">
+                        </div>
+                        <h3>루이보스</h3>
+                        <h4>Rooibos</h4>
+                        <h5>Hot / Ice　<span class="cost">5.0</span></h5>
+                    </div>
+
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    푸르름의 식물원에서<br>
+                                    재배한 장미로 끓인<br>
+                                    특별한 로즈티
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea04.png" alt="로즈티" class="t04">
+                        </div>
+                        <h3>로즈티</h3>
+                        <h4>removeClass Tea</h4>
+                        <h5>Hot / Ice　<span class="cost">5.5</span></h5>
+                    </div>
+
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    멘톨향의 묵직한 청량감,<br>
+                                    상쾌한 맛과 향이 인상적인<br>
+                                    허브티
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea0205.png" alt="페퍼민트" class="t0205">
+                        </div>
+                        <h3>페퍼민트</h3>
+                        <h4>Peppermint</h4>
+                        <h5>Hot / Ice　<span class="cost">5.0</span></h5>
+                    </div>
+
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    푸르름의 수제청으로<br>
+                                    상큼한 레못의 맛과 향을<br>
+                                    오롯이 살린 과일티
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea06.png" alt="수제레몬티" class="t06">
+                        </div>
+                        <h3>수제레몬티</h3>
+                        <h4>Lemon Tea</h4>
+                        <h5>Hot / Ice　<span class="cost">5.8</span></h5>
+                    </div>
+
+                    <div class="menu_box">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    푸르름의 수제청으로<br>
+                                    자몽의 달콤쌉싸름함을<br>
+                                    극대화시킨 과일티
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea07.png" alt="수제자몽티" class="t07">
+                        </div>
+                        <h3>수제자몽티</h3>
+                        <h4>Grapefruit Tea</h4>
+                        <h5>Hot / Ice　<span class="cost">5.8</span></h5>
+                    </div>
+
+                    <div class="menu_box newmenu">
+                        <div class="radius_box">
+                            <div class="box_black">
+                                <div class="menu_text">
+                                    푸르름 수제청에 담긴<br>
+                                    상큼한 레몬과<br>
+                                    진한 생강의 향을 살린 과일티
+                                </div>
+                            </div>
+    
+                            <img src="images/ade, tea/tea08.png" alt="레몬생강차" class="t08">
+                        </div>
+
+                        <img src="images/new.png" alt="신메뉴 아이콘" class="new">
+                        <h3>레몬생강차</h3>
+                        <h4>Lemon Ginger Tea</h4>
+                        <h5>Hot / Ice　<span class="cost">6.0</span></h5>
+                    </div>
+                </div>
+                <!--content_tea f-->
+
+            <!--ade/tea tab footer s-->
+            <div id="footer">
+                <div class="footer_inner">
+                    <a href="#" class="footer_logo"><img src="images/logo.png" alt="푸터로고"></a>
+                    <p class="footer_text">
+                        부산광역시 기장군 정관읍 병산리 205 푸르름 ｜ Tel : 051-123-4567 <br>
+                        Copy Right ⓒ Cafe 푸르름 All right reserved.
+                    </p>
+        
+                    <a href="#" class="insta"><img src="images/button01.png" alt="인스타그램"></a>
+                    <a href="#" class="youtube"><img src="images/button02.png" alt="유튜브"></a>
+                    <a href="#" class="facebook"><img src="images/button03.png" alt="페이스북"></a>
+                </div>
+            </div>
+            <!--ade/teae tab footer f-->
+
+        </div><!--ade/tea tap con f-->
+
+        
+        <!-------------------------------------dessert------------------------------------------>
+        <div class="tab_con"><!--dessert tap con s-->
+            <div id="dessert">
+                <h1>Dessert</h1>
+                <img src="images/dessert/cake_icon.png" alt="케이크 아이콘" class="cake_icon">
+        </div>
+
+            <div id="content_dessert"><!--dessert content box s-->
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                부드러운 제누아즈에<br>
+                                생크림, 딸기가 듬뿍 올라간<br>
+                                베이직한 케이크
+                            </div>
+                        </div>
+
+                        <img src="images/dessert/cake01.png" alt="딸기케이크" class="c01">
+                    </div>
+                    <h3>딸기 케이크</h3>
+                    <h4>Strawberry Cake</h4>
+                    <h5><span class="cost">6.0</span></h5>
+                </div>
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                쿠키 시트와 크림치즈,<br>
+                                베리 무스가 올라가<br>
+                                상큼하고 부드러운 케이크
+                            </div>
+                        </div>
+
+                        <img src="images/dessert/cake02.png" alt="베리 무스 케이크" class="c02">
+                    </div>
+                    <h3>베리 무스 케이크</h3>
+                    <h4>Berry Mousse Cake</h4>
+                    <h5><span class="cost">6.5</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                진한 초코 시트에<br>
+                                부드러운 생크림이 더해져<br>
+                                가볍게 즐길 수 있는 초코 케이크
+                            </div>
+                        </div>
+
+                        <img src="images/dessert/cake03.png" alt="초코 마블 케이크" class="c03">
+                    </div>
+                    <h3>초코 마블 케이크</h3>
+                    <h4>Chocolate Marble  Cake</h4>
+                    <h5><span class="cost">6.3</span></h5>
+                </div>
+
+
+                <div class="menu_box bestmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                달콤한 초코시트에<br>
+                                진한 가나슈 생크림을 넣은<br>
+                                달콤하고 촉촉한 초코 케이크
+                            </div>
+                        </div>
+
+                        <img src="images/dessert/cake04.png" alt="초코 케이크" class="c04">
+                    </div>
+
+                    <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                    <h3>초코 케이크</h3>
+                    <h4>Chocolate Cake</h4>
+                    <h5><span class="cost">5.5</span></h5>
+                </div>
+
+
+                <div class="menu_box newmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                제주 구좌 당근과<br>
+                                단짠단짠 크림치즈의<br>
+                                특별한 만남
+                            </div>
+                        </div>
+
+                        <img src="images/dessert/cake05.png" alt="당근 컵케이크" class="c05">
+                    </div>
+
+                    <img src="images/new.png" alt="신메뉴 아이콘" class="new">
+                    <h3>당근 컵케이크</h3>
+                    <h4>Carrot Cup Cake</h4>
+                    <h5><span class="cost">5.0</span></h5>
+                </div>
+
+
+                <div class="menu_box bestmenu">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                붉은 컬러 시트에<br>
+                                고소한 크림치즈를 풍부하게 올려<br>
+                                볼륨감이 돋보이는 한입 케이크
+                            </div>
+                        </div>
+
+                        <img src="images/dessert/cake06.png" alt="레드벨벳 컵케이크" class="c06">
+                    </div>
+
+                    <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                    <h3>레드벨벳 컵케이크</h3>
+                    <h4>Red Velvet Cup Cake</h4>
+                    <h5><span class="cost">4.5</span></h5>
+                </div>
+
+
+                <div class="menu_box">
+                    <div class="radius_box">
+                        <div class="box_black">
+                            <div class="menu_text">
+                                달콤쌉쌀한 다크초코 시트에<br>
+                                시원한 민트 크림이 더해져<br>
+                                더욱 맛있어진 한입 케이크
+                            </div>
+                        </div>
+
+                        <img src="images/dessert/cake07.png" alt="민트초코 컵케이크" class="c07">
+                    </div>
+                    <h3>민트초코 컵케이크</h3>
+                    <h4>Mint Chocolate Cup Cake</h4>
+                    <h5><span class="cost">4.3</span></h5>
+                </div>
+
+        </div><!--dessert content f-->
+
+        <!--content_dessert02 s-->
+        <div id="content_dessert02">
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            바삭한 타르트 시트에<br>
+                            달콤한 에그 필링이 더해져<br>
+                            자꾸만 손이 가는 디저트
+                        </div>
+                    </div>
+
+                    <img src="images/dessert/dessert01.png" alt="에그타르트" class="de01">
+                </div>
+                <h3>에그타르트(1pc)</h3>
+                <h4>Egg Tart</h4>
+                <h5><span class="cost">1.8</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            부드러운 빵 위에<br>
+                            달콤한 초코 코팅과<br>
+                            쿠키 토핑이 듬뿍 뿌려진 도넛
+                        </div>
+                    </div>
+
+                    <img src="images/dessert/dessert02.png" alt="초코링도넛" class="de02">
+                </div>
+                <h3>초코링도넛(1pc)</h3>
+                <h4>Chocolate Ring Donut</h4>
+                <h5><span class="cost">1.5</span></h5>
+            </div>
+
+            <div class="menu_box bestmenu">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            부드러운 식감을 가지고 있으며<br>
+                            진한 초콜릿 향과 아몬드를 넣어<br>
+                            고소한 풍미를 느낄 수 있는 디저트
+                        </div>
+                    </div>
+
+                    <img src="images/dessert/dessert03.png" alt="브라우니" class="de03">
+                </div>
+
+                <img src="images/best_icon.png" alt="베스트 아이콘" class="best">
+                <h3>브라우니(1pc)</h3>
+                <h4>Brownie</h4>
+                <h5><span class="cost">2.0</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            푸르름만의 레시피로<br>
+                            매장에서 매일 구워내는<br>
+                            특별한 쿠키 세트
+                        </div>
+                    </div>
+
+                    <img src="images/dessert/dessert04.png" alt="수제쿠키" class="de04">
+                </div>
+                <h3>수제쿠키(5pc)</h3>
+                <h4>Cookies</h4>
+                <h5><span class="cost">5.0</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            매장에서 갓 구워<br>
+                            신선하게 즐기는<br>
+                            진한 버터 풍미의 정통 크루아상
+                        </div>
+                    </div>
+
+                    <img src="images/dessert/dessert05.png" alt="크루아상" class="de05">
+                </div>
+                <h3>크루아상(1pc)</h3>
+                <h4>Croissant</h4>
+                <h5><span class="cost">2.0</span></h5>
+            </div>
+
+            <div class="menu_box">
+                <div class="radius_box">
+                    <div class="box_black">
+                        <div class="menu_text">
+                            고소하고 부드러운 버터 식빵에<br>
+                            시나몬 가루와 메이플 시럽,<br>
+                            아이스크림을 토핑한 든든한 디저트
+                        </div>
+                    </div>
+
+                    <img src="images/dessert/dessert06.png" alt="허니브레드" class="de06">
+                </div>
+                <h3>허니브레드</h3>
+                <h4>Honey Bread</h4>
+                <h5><span class="cost">5.5</span></h5>
+            </div>
+        </div>
+        <!--content_dessert02 f-->
+
+        <!--coffee tab footer s-->
+        <div id="footer">
+            <div class="footer_inner">
+                <a href="https://yunjung76.github.io/pururum/" class="footer_logo"><img src="images/logo.png" alt="푸터로고"></a>
+                <p class="footer_text">
+                    부산광역시 기장군 정관읍 병산리 205 푸르름 ｜ Tel : 051-123-4567 <br>
+                    Copy Right ⓒ Cafe 푸르름 All right reserved.
+                </p>
+        
+                <a href="#" class="insta"><img src="images/button01.png" alt="인스타그램"></a>
+                <a href="#" class="youtube"><img src="images/button02.png" alt="유튜브"></a>
+                <a href="#" class="facebook"><img src="images/button03.png" alt="페이스북"></a>
+            </div>
+        </div>
+        <!--coffee tab footer f-->
+    </div><!--tab con f-->
+</div>   <!--tab menu f-->
+</body>
+</html>
